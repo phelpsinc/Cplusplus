@@ -8,23 +8,25 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
+// Declaring the void function before the code.
+void dispSomething(int);
 
 void main()
 {
-    
-	
-	
-	
+	int age = 29;
+	dispSomething(age);
 	
 	system("pause");
 	return;
 }
 
-void dispSomething()
+void dispSomething(int numa)
 {
-	cout << "display someting" << endl;
+	cout << numa <<endl;
+	return;
 }
 
