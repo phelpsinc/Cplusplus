@@ -13,20 +13,33 @@
 using namespace std;
 
 // Declaring the void function before the code.
-void dispSomething(int);
+int dispSomething(int, int = 10);
 
 void main()
 {
-	int age = 29;
-	dispSomething(age);
+	int x = 29;
+	int y = 34;
+	double a = 23.7;
+	double b = 45.9;
+
+	cout << "answer " << dispSomething(x, y) << endl;
+	cout << "answer " << dispSomething(x, y) << endl;
+	cout << "answer " << dispSomething(x, y) << endl;
+	cout << "answer " << dispSomething(x, y) << endl;
+	cout << "answer " << dispSomething(x, y) << endl;
+
 	
 	system("pause");
 	return;
 }
 
-void dispSomething(int numa)
+int dispSomething(int numa, int numb)
 {
-	cout << numa <<endl;
-	return;
+	static int count = 0;
+	count++;
+	cout << "count " << count;
+	cout << "int ver" <<endl;
+	return numa + numb;
 }
+
 
