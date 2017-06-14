@@ -29,7 +29,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cps202week1chapter6.cpp">
+    <ClCompile Include="Chapter6Final.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
