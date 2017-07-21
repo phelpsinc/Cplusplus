@@ -16,6 +16,7 @@ using namespace std;
 
 void main()
 {
+
 	const int ARRAY_SIZE = 12; // The size of the array.
 	int numbers[ARRAY_SIZE];
 	int count = 0;
@@ -23,6 +24,11 @@ void main()
 
 	double total = 0; //This variable will hold the total.
 	int average; //This variable will hold the average.
+	
+	int highest; //Initialize the variable that will hold the highest value.
+	int lowest; //Initlialize the variable that will hold the lowest value.
+
+	
 
 	//Open the file.
 	inputFile.open("C:\\cplusplus\\numbers.txt");
@@ -36,12 +42,37 @@ void main()
 
 	for (int count = 0; count < ARRAY_SIZE; count++)
 	{
-		total += numbers[count];
-		average = total / ARRAY_SIZE;
+		total += numbers[count]; // Gathers the total of the array numbers.
+		average = total / ARRAY_SIZE; // Gets the average of the numbers
+	}
+
+	//Needed to start another for loop and start the numbers at position 0.
+	//This way you can start another comparison.
+
+	highest = numbers[0];
+	lowest = numbers[0];
+
+	for (int count = 1; count < ARRAY_SIZE; count++)
+	{
+		if (numbers[count] < lowest) //Gets the lowest numbers
+		{
+			lowest = numbers[count];
+
+		}
+		else if (numbers[count] > highest) //Gets the highest number.
+		{
+			highest = numbers[count];
+		}
 
 	}
+
+						
 	
-	cout << average << endl << endl;
+	cout << "The Lowest Number is " << lowest << endl << endl;
+	cout << "The Highest Number is " << highest << endl << endl;
+	cout << "The Total is " << total << endl << endl;
+	cout << "The Average is " << average << endl << endl;
+
 	system("pause");
 
     return;
