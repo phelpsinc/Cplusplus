@@ -2,8 +2,8 @@
 //Also known as specification file.
 class Rectangle
 {
-private:
-	double *length; 
+protected: //Treat them as private for anyone outside of these classes.
+	double length; 
 	double width;
 	static int rectCount;
 	 
@@ -20,6 +20,7 @@ public:
 	void setLength(double); //Mutator Fucntion
 	void setWidth(double value); //Mutator Fucntion
 	static int getRectCount();
+	virtual void print() const;
 };
 
 
